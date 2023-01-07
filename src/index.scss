@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+$primary-color-black: #191d2b;
+$primary-color-green: #27ae60;
+$white-color: #ffffff;
+$black-color: #000;
+$grey-color: #f8f8f8;
+$grey-color-a: #dbe1e8;
+$grey-color-b: #b2becd;
+$grey-color-c: #6c7983;
+$grey-color-d: #454e56;
+$grey-color-e: #2a2e35;
+$grey-color-f: #12181b;
+
+$primary-font-family: "Poppins", sans-serif;
+$primary-font-size: 1.2rem;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $primary-font-family;
+  background-color: $primary-color-black;
+}
+
+// @media (prefers-reduced-motion: no-preference) {
+//   .App-logo {
+//     animation: App-logo-spin infinite 20s linear;
+//   }
+// }
+
+// @keyframes App-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }

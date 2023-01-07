@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+$primary-color-black: #191d2b;
+$primary-color-green: #27ae60;
+$primary-color-blue: #339bf0cb;
+$white-color: #ffffff;
+$black-color: #000;
+$grey-color: #f8f8f8;
+$grey-color-a: #dbe1e8;
+$grey-color-b: #b2becd;
+$grey-color-c: #6c7983;
+$grey-color-d: #454e56;
+$grey-color-e: #2a2e35;
+$grey-color-f: #12181b;
+
+$primary-font-family: "Poppins", sans-serif;
+$primary-font-size: 1.2rem;
+
+.Primary-color {
+  color: $white-color;
+}
+
+////////////////* Header Section*/////////////////////////
+.Header {
+  position: relative;
+}
+
+/////////////////////* NavLink Section*///////////////////////////////////
+.Navbar {
+  position: fixed;
+  right: 2rem;
+  top: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.8rem;
+  z-index: 200;
+  transform: translate(-50%, -50%);
+
+  .Link {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $grey-color;
+    .NavLink {
+      padding: 0.4rem;
+      display: inline-block;
+      background-color: $primary-color-blue;
+      font-size: 2.8rem;
+      border-radius: 50%;
+    }
+    .text {
+      display: none;
+      position: absolute;
+    }
+    &:hover .text {
+      transition: all 0.2s ease-in;
+      display: block;
+      top: -0.6rem;
+      left: -4.4rem;
+      padding: 0.2rem;
+      font-size: 1rem;
+      box-shadow: 0 0 1px 1px $grey-color-d;
+    }
+  }
+}
+
+////////////////////////////* Home Section*///////////////////////
+.Grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+
+  .Cols-1 {
+    margin: 4rem;
+
+    .V-shape {
+      transition: all 0.3s ease-in-out;
+      width: 70%;
+      height: 100%;
+      background-color: $primary-color-blue;
+      -webkit-clip-path: polygon(0 0, 26% 0, 75% 100%, 0% 100%);
+      clip-path: polygon(0 0, 26% 0, 75% 100%, 0% 100%);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -100;
+    }
+    img {
+      border-radius: 50%;
+      filter: grayscale(50%);
+      &:hover {
+        filter: blur(0);
+        filter: grayscale(-50%);
+
+        transition: all 0.4s ease-in-out;
+      }
+    }
+  }
+
+  .Cols-2 {
+    margin: 4rem;
+    .Name {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+//////////////*FOOTER Section*///////////////////////////////
+.Footer {
+  position: absolute;
+  right: 3rem;
+}
+
+/////////////////////*Contact Section*////////////////////////////
+
+.ContactBox {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 0rem;
+
+  .Contact-Contents {
+    width: 100%;
+    margin: 0 2rem 0 0;
+  }
+  .Contact-Header {
+    display: grid;
+    gap: 0.4rem;
+
+    .Heading-Box {
+      font-size: 1.8rem;
+    }
+  }
+  .Form {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    .NamesGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+
+      .Names {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        .Contact-Name {
+          padding: 1rem;
+          border-radius: 0.4rem;
+          border: none;
+          box-shadow: 1.2px 1.2px 1.2px 1.2px rgba(111, 110, 110, 0.379);
+        }
+      }
+    }
+    .EmailField {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      .Email {
+        padding: 1rem;
+        border-radius: 0.4rem;
+        border: none;
+        box-shadow: 1.2px 1.2px 1.2px 1.2px rgba(111, 110, 110, 0.379);
+      }
+    }
+    .MessageField {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      .Message {
+        padding: 1rem;
+        border-radius: 0.4rem;
+        border: none;
+        box-shadow: 1.2px 1.2px 1.2px 1.2px rgba(111, 110, 110, 0.379);
+      }
+    }
+
+    .CheckboxField {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .BtnField {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      .Btn {
+        padding: 1rem;
+        border-radius: 0.4rem;
+        border: none;
+        background-color: #228be6;
+        color: white;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .Form {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-right: 1rem;
+  }
+  .NamesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 830px) {
+  .Contact-Contents {
+    margin: 1rem 1rem;
+  }
+}
