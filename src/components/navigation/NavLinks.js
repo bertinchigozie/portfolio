@@ -13,7 +13,7 @@ function NavLinks() {
           <p className="text">Home</p>
         </div>
       </Link>
-      <Link>
+      <Link to="/projects">
         <div className="Link">
           <FaProjectDiagram className="NavLink" />
           <p className="text">Projects</p>
@@ -39,13 +39,13 @@ function NavLinks() {
           <p className="text">LinkedIn</p>
         </div>
       </a>
-      <Link to="contactme">
+      <Link to="/contactme">
         <div className="Link">
           <BsFillPersonFill className="NavLink" />
           <p className="text">Contact Me</p>
         </div>
       </Link>
-      <Link>
+      <Link to="/">
         <div className="Link">
           <FaSign className="NavLink" />
           <p className="text">Sign Up</p>
