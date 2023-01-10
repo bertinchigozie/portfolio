@@ -130,10 +130,13 @@ $primary-font-size: 1.2rem;
 .Nav {
   &__menu {
     display: block;
-    background: radial-gradient($grey-color-b, $grey-color);
+    background-image: radial-gradient(
+      $primary-color-black,
+      $primary-color-blue
+    );
     width: 3rem;
     height: 3rem;
-    background-color: $grey-color;
+    // background-color: $grey-color;
     border-radius: 50%;
     position: fixed;
     bottom: 3rem;
