@@ -3,6 +3,7 @@
 $primary-color-black: #191d2b;
 $primary-color-green: #27ae60;
 $primary-color-blue: #339bf0cb;
+$secondary-color-blue: #088cff81;
 $white-color: #ffffff;
 $black-color: #000;
 $grey-color: #f8f8f8;
@@ -66,6 +67,129 @@ $primary-font-size: 1.2rem;
       box-shadow: 0 0 1px 1px $grey-color-d;
     }
   }
+
+  @media (max-width: 450px) {
+    display: none;
+    transition: all 0.4s ease;
+  }
+}
+
+/////////////////////////////////////////*SIDE Drawer///////////////
+.background {
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  background-image: radial-gradient($primary-color-blue, $secondary-color-blue);
+  border-radius: 50%;
+  position: fixed;
+  bottom: 4.6rem;
+  left: 1rem;
+  box-shadow: 0 2px 3px $grey-color-b;
+  z-index: 2000;
+  text-align: center;
+  cursor: pointer;
+
+  @media (max-width: 450px) {
+    display: block;
+    transition: all 0.4s ease;
+  }
+
+  &__icon {
+    position: relative;
+    top: 0.6rem;
+    &,
+    &::before,
+    &::after {
+      width: 1.6rem;
+      height: 2px;
+      background-color: $grey-color;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.4s;
+    }
+    &::before {
+      top: -0.5rem;
+    }
+    &::after {
+      top: 0.5rem;
+    }
+  }
+  &:hover &__icon::before {
+    top: -0.6rem;
+  }
+  &:hover &__icon::after {
+    top: 0.6rem;
+  }
+}
+.Nav {
+  &__menu {
+    display: block;
+    background: radial-gradient($grey-color-b, $grey-color);
+    width: 3rem;
+    height: 3rem;
+    background-color: $grey-color;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 4.6rem;
+    left: 1rem;
+    z-index: 100;
+    transition: transform 4s ease-in 5s;
+    transform: scale(100);
+  }
+
+  &__lists {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  &__list {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+  &__item {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    & a {
+      text-align: center;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: $black-color;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 0.4rem;
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 50%,
+      $primary-color-blue 50%
+    );
+    background-size: 250%;
+    transition: all 0.3s ease-in;
+
+    &:hover,
+    &:active {
+      transform: translateX(0.4rem);
+      background-position: 100%;
+      color: $grey-color;
+    }
+  }
 }
 
 ////////////////////////////* Home Section*///////////////////////
@@ -74,6 +198,7 @@ $primary-font-size: 1.2rem;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-content: center;
+
   .Cols-1 {
     margin: 4rem;
 
