@@ -58,7 +58,7 @@ const projects = [
     name: "Mapty app",
     id: 6,
     image: mapty,
-    url: "https://jolly-cloudfare.netlify.app/",
+    url: "https://go-mapty.netlify.app/",
     description:
       "This is a map web app, I built it when I was learning modern JavaScript. It was originally built by Jonas Schemedtmann. The app gets your current location, which you can record your cycling or running distance and kilometers covered. It was built JavaScript OOP. It is user friendly",
     how: "Click on the map, a form displays at the left side of the screen, fill the required information then click enter",
